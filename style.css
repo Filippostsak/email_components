@@ -69,50 +69,86 @@ body {
 .image-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   overflow: hidden;
-  height: 700px;
-  z-index:1;
+  height: 800px;
+  z-index: 1;
 }
 /* Δεξιά εικόνα */
 .right-image {
-    padding: 2rem;
+  padding: 1rem;
   position: absolute;
-  width: 50%;
-  max-width: 400px;
-  height: 500px;
+  width: 100%;
+  max-width: 300px;
+  height: 600px;
   right: -40%;
   top: -2rem;
 }
 /* Αριστερή εικόνα */
 .left-image {
-    padding: 2rem;
+  padding: 1rem;
   position: absolute;
-  width: 50%;
-  max-width: 400px;
-  height: 500px;
-  left: -45%;
+  width: 100%;
+  max-width: 300px;
+  height: 600px;
+  left: -40%;
   top: -2rem;
 }
 
 .product-1 {
   display: block;
   position: absolute;
-  top: 150px;
-  left: 20px;
-  width: 180px;
+  top: 180px;
+  left: 35px;
+  width: 150px;
   height: 250px;
 }
 
 .product-2 {
   display: block;
   position: absolute;
-  top: 150px;
-  right: 20px;
-  width: 180px;
+  top: 180px;
+  right: 35px;
+  width: 150px;
   height: 250px;
 }
+.gift-section {
+  position: absolute;
+  text-align: center;
+  top: 580px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gift-title {
+  color: #ef7a0f;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gift-text {
+  color: #ffffff;
+  text-align: center;
+}
+.gift-image {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* 🔹 🔹 MEDIA QUERIES ΓΙΑ RESPONSIVE DESIGN */
+/* ✅ Αν η οθόνη είναι μικρότερη από 360px (κινητά) */
+@media only screen and (max-width: 360px) {
+  .product-1 {
+    left: 20px;
+  }
+  .product-2 {
+    right: 20px;
+  }
+}
+
 /* 🔹 🔹 MEDIA QUERIES ΓΙΑ RESPONSIVE DESIGN */
 /* ✅ Αν η οθόνη είναι μικρότερη από 600px (κινητά) */
 @media only screen and (max-width: 600px) {
@@ -158,37 +194,23 @@ body {
   }
   .right-image,
   .left-image {
-    width: 60%; /* Μεσαίο μέγεθος εικόνων */
-    max-width: 350px;
+    width: 500px; /* Μεσαίο μέγεθος εικόνων */
+    height: 700px;
+    max-width: 700px;
     position: absolute;
     top: -1.5rem;
   }
-}
-.gift-section {
-  position: absolute;
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px 0;
-  top: 300px;
-  transform: translate(50%, 50%);
-}
-.gift-title {
-  color: #ef7a0f;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.gift-text {
-  color: #ffffff;
-  text-align: center;
-}
-.gift-image {
-  width: 100px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  .product-1 {
+    width: 250px;
+    height: 350px;
+  }
+  .product-2 {
+    width: 250px;
+    height: 350px;
+  }
+  .gift-section {
+    top: 650px;
+  }
 }
 
 /* ✅ Αν η οθόνη είναι μεγαλύτερη από 1024px (desktop) */
@@ -202,6 +224,7 @@ body {
   }
   .mela-b3-anthelios {
     font-size: 40px;
+    z-index: 1;
   }
   .header-text {
     font-size: 40px;
@@ -211,9 +234,21 @@ body {
   }
   .right-image,
   .left-image {
-    width: 50%; /* Διατηρεί το κανονικό μέγεθος των εικόνων */
-    max-width: 400px;
+    width: 450px; /* Διατηρεί το κανονικό μέγεθος των εικόνων */
+    max-width: 100%;
     position: absolute;
     top: -2rem;
+    z-index: 0;
+  }
+  .product-1 {
+    top: 150px;
+    width: 250px;
+    height: 320px;
+  }
+  .product-2 {
+    top: 150px;
+    width: 250px;
+    height: 320px;
   }
 }
+
