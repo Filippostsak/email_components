@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* If the screen size is less than 600px */
+    @media only screen and (max-width: 600px) {
+      .header-title {
+        font-size: 8px;
+      }
+      .header-link {
+        font-size: 8px;
+        font-weight: bolder;
+      }
+      .partnershop-image {
+        width: 100%;
+        background-color: #ffffff;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .partnershop-image-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+      .mela-b3-anthelios {
+        font-size: 25px;
+      }
+      .header-text{
+        font-size: 25px;
+      }
+      .header-sub-text{
+        font-size: 18px;
+      }
+    }
+    /* If the screen size is 601px or more*/
+    @media only screen and (min-width: 601px) {
+      .header-title {
+        font-size: 18px;
+      }
+      .header-link {
+        font-size: 18px;
+        font-weight: bolder;
+      }
+      .partnershop-image {
+        width: 100%;
+        background-color: #ffffff;
+        max-width: 500px;
+        margin: 2rem auto;
+      }
+      .mela-b3-anthelios {
+        font-size: 40px;
+        z-index: 2;
+      }
+
+    }
+    .right-image{
+      position: absolute;
+      width: 100%;
+      left: 25%;
+      height: 500px;
+      top: -1.5rem;
+    }
+    .left-image{
+      position: absolute;
+      width: 100%;
+      right:210px;
+      height:500px;
+      top:-2.8rem;
+    }
+  </style>
+  <body
+    style="
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+      max-width: 800px;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: black;
+    "
+  >
+    <div style="background-color: black; color: #ffffff; padding: 5px">
+      <div class="header" style="text-align: center">
+        <h2 class="header-title">
+          Η παραγγελία μαζί μας είναι απλή, βολική και 24/7 &nbsp;|&nbsp;
+          <a
+            class="header-link"
+            href="%%view_email_url%%"
+            style="text-decoration: none; color: #ffffff"
+            ><strong>Κάντε κλικ εδώ για προβολή online</strong></a
+          >
+        </h2>
+      </div>
+      <div class="partnershop-image">
+        <img
+          class="partnershop-image-image"
+          src="./images/partnershop.gif"
+          alt="partnershop image"
+        />
+      </div>
+      <div>
+        <h1 class="header-text" style="margin: 2rem 0; color: #ffffff;">MAKE THE BIG - BIGGER <br><br><span style="color: #00a7f9;" class="header-sub-text">ΤΟ ΑΠΟΛΥΤΟ ΔΕΡΜΑΤΟΛΟΓΙΚΟ <br>ΠΡΩΤΟΚΟΛΛΟ ΚΑΤΑ ΤΩΝ ΚΗΛΙΔΩΝ</span></h1>
+      </div>
+      <div style="position: relative; z-index: 1; width: 100%;margin-top: 1rem; margin: 0 auto; overflow: hidden;">
+      <div style="text-align: center">
+        <h2 class="mela-b3-anthelios" style="color: #694ea2">
+          MELA B3 <span style="color: white">+</span>
+          <strong class="mela-b3-anthelios" style="color: #f67f0f"
+            >ANTHELIOS</strong
+          ><br /><span class="mela-b3-anthelios" style="color: #ffffff"
+            >PROMO BOXES</span
+          >
+        </h2>
+      </div>
+      </div>
+      <div style="position: relative; max-width: 100%; height: auto; display: block; width: 600px;">
+        <div class="right-image">
+          <img class="right-image" src="./images/ANTHELIOS tzoyxtra small.jpg" alt="">
+        </div>
+        <div>
+          <img class="left-image" src="./images/LaRochePosay-Product-Skincare-MelaB3-MelaB3Serum-30ml-03337875890021-Ingredient-MELASYL small.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
