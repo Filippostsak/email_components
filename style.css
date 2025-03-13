@@ -1,0 +1,219 @@
+/* 🔹 Γενικές ρυθμίσεις για να αποτρέψουμε το overflow */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important; /* Αποτρέπει το οριζόντιο scroll */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+/* 🔹 Κεντρικό container */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+/* 🔹 Στυλ για το header */
+.header {
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+.header-title {
+  font-size: 18px;
+}
+.header-link {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+/* 🔹 Ρυθμίσεις για την εικόνα του PartnerShop */
+.partnershop-image {
+  width: 100%;
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.partnershop-image-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+/* 🔹 Στυλ για το κεντρικό μήνυμα */
+.header-text {
+  margin: 2rem 0;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+.header-sub-text {
+  font-size: 25px;
+  color: #00a7f9;
+  text-align: center;
+}
+/* 🔹 Στυλ για το "MELA B3 + ANTHELIOS" */
+.mela-b3-anthelios {
+  font-size: 40px;
+  color: #694ea2;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+/* 🔹 Εικόνες φόντου (οι δύο μεγάλες εικόνες) */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 700px;
+  z-index:1;
+}
+/* Δεξιά εικόνα */
+.right-image {
+    padding: 2rem;
+  position: absolute;
+  width: 50%;
+  max-width: 400px;
+  height: 500px;
+  right: -40%;
+  top: -2rem;
+}
+/* Αριστερή εικόνα */
+.left-image {
+    padding: 2rem;
+  position: absolute;
+  width: 50%;
+  max-width: 400px;
+  height: 500px;
+  left: -45%;
+  top: -2rem;
+}
+
+.product-1 {
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  width: 180px;
+  height: 250px;
+}
+
+.product-2 {
+  display: block;
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  width: 180px;
+  height: 250px;
+}
+/* 🔹 🔹 MEDIA QUERIES ΓΙΑ RESPONSIVE DESIGN */
+/* ✅ Αν η οθόνη είναι μικρότερη από 600px (κινητά) */
+@media only screen and (max-width: 600px) {
+  .header-title {
+    font-size: 10px;
+  }
+  .header-link {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .mela-b3-anthelios,
+  .header-text {
+    font-size: 25px;
+  }
+  .header-sub-text {
+    font-size: 18px;
+  }
+  .right-image,
+  .left-image {
+    width: 80%; /* Μικρότερο μέγεθος εικόνων σε κινητά */
+    max-width: 400px;
+    position: absolute;
+    top: -1rem;
+  }
+}
+/* ✅ Αν η οθόνη είναι από 601px έως 1024px (tablets & μικρές οθόνες) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .header-title {
+    font-size: 14px;
+  }
+  .header-link {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .mela-b3-anthelios {
+    font-size: 35px;
+  }
+  .header-text {
+    font-size: 35px;
+  }
+  .header-sub-text {
+    font-size: 22px;
+  }
+  .right-image,
+  .left-image {
+    width: 60%; /* Μεσαίο μέγεθος εικόνων */
+    max-width: 350px;
+    position: absolute;
+    top: -1.5rem;
+  }
+}
+.gift-section {
+  position: absolute;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  top: 300px;
+  transform: translate(50%, 50%);
+}
+.gift-title {
+  color: #ef7a0f;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gift-text {
+  color: #ffffff;
+  text-align: center;
+}
+.gift-image {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ✅ Αν η οθόνη είναι μεγαλύτερη από 1024px (desktop) */
+@media only screen and (min-width: 1025px) {
+  .header-title {
+    font-size: 18px;
+  }
+  .header-link {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .mela-b3-anthelios {
+    font-size: 40px;
+  }
+  .header-text {
+    font-size: 40px;
+  }
+  .header-sub-text {
+    font-size: 25px;
+  }
+  .right-image,
+  .left-image {
+    width: 50%; /* Διατηρεί το κανονικό μέγεθος των εικόνων */
+    max-width: 400px;
+    position: absolute;
+    top: -2rem;
+  }
+}
