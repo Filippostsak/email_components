@@ -3,9 +3,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promo Email - 600px Layout</title>
+    <title>Promo Email - Dark Mode</title>
+
     <style type="text/css">
-      /* Βασικό Reset: Συστήνεται να τα έχουμε για email templates */
+      /* -------- Reset Styles -------- */
       table {
         border-spacing: 0;
         border-collapse: collapse;
@@ -16,14 +17,11 @@
         outline: none;
         text-decoration: none;
       }
-
-      /* Container κλάση για τη σταθερή διάταξη 600px */
+      /* Έστω για λίγο responsive σε mobile */
       .container {
         width: 600px !important;
         max-width: 600px !important;
       }
-
-      /* Media Queries για mobile, όπου υποστηρίζεται */
       @media only screen and (max-width: 600px) {
         .container {
           width: 100% !important;
@@ -41,38 +39,36 @@
           max-width: 100% !important;
         }
       }
-
-      /*
-      Dark Mode basic hack:
-      - Κάποιοι clients (π.χ. Apple Mail) θα αναγνωρίσουν το @media prefers-color-scheme: dark
-      - Gmail & Outlook μπορεί να το αγνοήσουν ή να κάνουν δικό τους invert.
-    */
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #000000 !important;
-        }
-        .dark-bg {
-          background-color: #000000 !important;
-          color: #ffffff !important;
-        }
-        .white-bg {
-          background-color: #cccccc !important; /* Αν θέλεις να «γκριζάρει» αντί για καθαρό λευκό */
-          color: #000000 !important;
-        }
-      }
     </style>
+
+    <!--[if mso]>
+      <style type="text/css">
+        /* Force Outlook να μη βάζει extra spacing σε πίνακες */
+        table,
+        td,
+        p,
+        a {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      </style>
+    <![endif]-->
   </head>
 
   <body
     style="
       margin: 0;
       padding: 0;
-      background-color: #1c1c1c;
       font-family: Arial, Helvetica, sans-serif;
+      background-color: #1c1c1c;
     "
-    class="dark-bg"
   >
-    <!-- Κύριος πίνακας: 100% πλάτος -->
+    <!--[if mso]>
+      <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+        <v:fill type="tile" color="#1C1C1C" />
+      </v:background>
+    <![endif]-->
+
+    <!-- Κύριο wrapper table στο 100% πλάτος, με dark background -->
     <table
       width="100%"
       border="0"
@@ -88,7 +84,7 @@
     >
       <tr>
         <td align="center" style="padding: 0; margin: 0">
-          <!-- Container table: σταθερό 600px -->
+          <!-- Container 600px -->
           <table
             class="container"
             width="600"
@@ -131,27 +127,26 @@
               </td>
             </tr>
 
-            <!-- Εικόνα PartnerShop με ΛΕΥΚΟ background χωρίς VML -->
+            <!-- PartnerShop GIF (επίσης σε dark background) -->
             <tr>
-              <!-- Αν θέλεις να μην αλλάζει ποτέ χρώμα αυτή η περιοχή σε dark mode, βάλε κλάση white-bg -->
               <td
                 align="center"
-                style="padding: 10px; margin: 0; background-color: #ffffff"
-                class="white-bg"
+                style="padding: 10px; margin: 0; background-color: #1c1c1c"
               >
+                <!-- [if gte mso 9] δεν χρειάζεται εδώ αν είναι ΜΟΝΟ χρώμα background -->
                 <a
                   style="text-decoration: none"
                   href="https://gr.lorealdermatologicalbeautypartnershop.com/el/home/"
                 >
                   <img
-                    src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/849cb92e-529e-4ebb-a117-56e9b4ebe1ec.gif"
+                    src="./images/partnershopnew.png"
                     alt="PartnerShop"
                     style="
                       display: block;
                       border: 0;
                       width: 100%;
                       max-width: 500px;
-                      height: 90px;
+                      height: auto;
                       outline: none;
                       text-decoration: none;
                     "
@@ -166,6 +161,7 @@
                 align="center"
                 style="padding: 20px; color: #ffffff; margin: 0"
               >
+                <hr />
                 <h1
                   class="header-text"
                   style="
@@ -181,6 +177,7 @@
                   <span style="color: #0abde3">ΠΡΩΤΟΚΟΛΛΟ</span><br />
                   ΚΑΤΑ ΤΩΝ <span>ΚΗΛΙΔΩΝ</span>
                 </h1>
+                <hr />
                 <br />
                 <span
                   class="header-sub-text"
@@ -188,22 +185,22 @@
                     font-size: 25px;
                     color: #694ea2;
                     display: block;
-                    line-height: 1.2;
+                    margin-top: 5rem;
                     font-family: Arial, Helvetica, sans-serif;
                   "
                 >
                   Powered by <br />
-                  <!-- Melasyl multi patented image - με σταθερό max-width 300px -->
                   <img
-                    src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/4af32122-e6af-4a2a-a2cc-93135160303d.png"
+                    src="./images/Melasyl logo small.png"
                     alt="Melasyl multi patented image"
                     style="
                       display: block;
                       border: 0;
-                      width: 150px;
-                      max-width: 200px;
+                      width: 350px;
+                      max-width: 350px;
                       outline: none;
                       text-decoration: none;
+                      margin-bottom: 5rem;
                     "
                   />
                 </span>
