@@ -1,77 +1,577 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
   <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promo Email</title>
-    <link rel="stylesheet" href="./style.css" />
-    <!-- Σύνδεση με το CSS -->
+    <title>Promo Email - 600px Layout</title>
+    <style type="text/css">
+      /* --------- Μερικές βασικές επαναφορές --------- */
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      /* Κρατήσαμε την κλάση container για responsive (media query) */
+      .container {
+        width: 600px !important;
+        max-width: 600px !important;
+      }
+      /* Media Queries: όπου υποστηρίζονται από mobile clients */
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          max-width: 600px !important;
+        }
+        .header-text {
+          font-size: 35px !important;
+        }
+        .header-sub-text {
+          font-size: 30px !important;
+          font-weight: bold !important;
+        }
+        .product-img {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+      /* [if gte mso 9] χρησιμοποιείται παρακάτω για background fallback σε Outlook */
+    </style>
+    <!--[if gte mso 9]>
+      <style type="text/css">
+        body {
+          background-color: #1c1c1c !important;
+        }
+      </style>
+    <![endif]-->
   </head>
-  <body>
-    <!-- 🔹 Header με μήνυμα -->
-    <div class="header">
-      <h2 class="header-title">
-        Η παραγγελία μαζί μας είναι απλή, βολική και 24/7 &nbsp;|&nbsp;
-        <a class="header-link" href="%%view_email_url%%"
-          >Κάντε κλικ εδώ για προβολή online</a
-        >
-      </h2>
-    </div>
-    <!-- 🔹 Εικόνα PartnerShop -->
-    <div class="partnershop-image">
-      <img
-        class="partnershop-image-image"
-        src="./images/partnershop.gif"
-        alt="PartnerShop"
-      />
-    </div>
-    <!-- 🔹 Κεντρικό μήνυμα -->
-    <div class="container">
-      <h1 class="header-text">
-        MAKE THE BIG - BIGGER <br /><br />
-        <span class="header-sub-text"
-          >ΤΟ ΑΠΟΛΥΤΟ ΔΕΡΜΑΤΟΛΟΓΙΚΟ <br />ΠΡΩΤΟΚΟΛΛΟ ΚΑΤΑ ΤΩΝ ΚΗΛΙΔΩΝ</span
-        >
-      </h1>
-      <!-- 🔹 Τίτλος "MELA B3 + ANTHELIOS" -->
-      <div class="mela-b3-anthelios">
-        MELA B3 <span style="color: white">+</span>
-        <strong style="color: #f67f0f">ANTHELIOS</strong><br />
-        <span style="color: #ffffff">PROMO BOXES</span>
-      </div>
-    </div>
-    <!-- 🔹 Εικόνες προϊόντων στο background -->
-    <div class="image-container">
-      <img
-        class="left-image"
-        src="./images/LaRochePosay-Product-Skincare-MelaB3-MelaB3Serum-30ml-03337875890021-Ingredient-MELASYL small.jpg"
-        alt="MELA B3 Serum"
-      />
-      <img
-        class="right-image"
-        src="./images/ANTHELIOS tzoyxtra small.jpg"
-        alt="Anthelios"
-      />
-      <img
-        class="product-1"
-        src="./images/LRP_PROMOBOX_CREAM_MELA_B3 small.jpg"
-        alt="Mela B3 Δώρο με Anthelios UVMUNE 400 "
-      />
-      <img
-        class="product-2"
-        src="./images/LRP_PROMOBOX_SERUM_MELA_B3 small.jpg"
-        alt="Mela B3 Δώρο με Anthelios UVMUNE 400 "
-      />
-      <div class="gift-section">
-        <h2 class="gift-title">ΔΩΡΟ</h2>
-        <p class="gift-text">
-          <strong>ANTHELIOS </strong>UVMUNE <strong>400</strong> <br />ANTI-SPOT
-          FLUID
-        </p>
-        <img class="gift-image" src="./images/Melasyl logo small.png" alt="Melasyl Logo" />
-      </div>
-      <div class="footer">
-      </div>
-    </div>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #1c1c1c;
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <!--[if gte mso 9]>
+      <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+        <v:fill type="tile" color="#1C1C1C" />
+      </v:background>
+    <![endif]-->
+
+    <!-- Κύριος πίνακας: 100% πλάτος -->
+    <table
+      width="100%"
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      bgcolor="#1C1C1C"
+      style="
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #1c1c1c;
+      "
+    >
+      <tr>
+        <td align="center" style="padding: 0; margin: 0">
+          <!-- Container table: σταθερό 600px -->
+          <table
+            class="container"
+            width="600"
+            border="0"
+            cellspacing="0"
+            cellpadding="0"
+            bgcolor="#1C1C1C"
+            style="
+              border-spacing: 0;
+              border-collapse: collapse;
+              width: 600px;
+              max-width: 600px;
+              background-color: #1c1c1c;
+            "
+          >
+            <!-- Header Section -->
+            <tr>
+              <td
+                style="
+                  padding: 5px;
+                  text-align: center;
+                  color: #ffffff;
+                  font-size: 18px;
+                  margin: 0;
+                "
+              >
+                Η παραγγελία μαζί μας είναι απλή, βολική και 24/7 &nbsp;|&nbsp;
+                <a
+                  target="_blank"
+                  href="https://gr.lorealdermatologicalbeautypartnershop.com/el/home/"
+                  style="
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: #0abde3;
+                  "
+                >
+                  Κάντε κλικ εδώ για προβολή online
+                </a>
+              </td>
+            </tr>
+
+            <!-- Εικόνα PartnerShop με λευκό background (VML σε Outlook) -->
+            <tr>
+              <td
+                align="center"
+                bgcolor="#1C1C1C"
+                style="padding: 10px; margin: 0"
+              >
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:500px; height:90px;">
+                  <v:fill type="solid" color="#ffffff" />
+                  <v:textbox inset="0,0,0,0">
+              <![endif]-->
+                <a
+                  style="text-decoration: none"
+                  href="https://gr.lorealdermatologicalbeautypartnershop.com/el/home/"
+                >
+                  <img
+                    src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/849cb92e-529e-4ebb-a117-56e9b4ebe1ec.gif"
+                    alt="PartnerShop"
+                    style="
+                      display: block;
+                      border: 0;
+                      width: 100%;
+                      max-width: 500px;
+                      height: 100px;
+                      background-color: #ffffff;
+                      outline: none;
+                      text-decoration: none;
+                    "
+                  />
+                </a>
+                <!--[if gte mso 9]>
+                  </v:textbox>
+                </v:rect>
+              <![endif]-->
+              </td>
+            </tr>
+
+            <!-- Κεντρικό μήνυμα -->
+            <tr>
+              <td
+                align="center"
+                style="padding: 20px; color: #ffffff; margin: 0"
+              >
+                <h1
+                  class="header-text"
+                  style="
+                    font-size: 40px;
+                    margin: 0;
+                    padding: 0;
+                    color: #ffffff;
+                    font-family: Arial, Helvetica, sans-serif;
+                  "
+                >
+                  ΤΟ ΑΠΟΛΥΤΟ <span style="color: #0abde3">ΔΕΡΜΑΤΟΛΟΓΙΚΟ</span
+                  ><br />
+                  <span style="color: #0abde3">ΠΡΩΤΟΚΟΛΛΟ</span><br />
+                  ΚΑΤΑ ΤΩΝ <span>ΚΗΛΙΔΩΝ</span>
+                </h1>
+                <br />
+                <span
+                  class="header-sub-text"
+                  style="
+                    font-size: 25px;
+                    color: #694ea2;
+                    display: block;
+                    line-height: 1.2;
+                    font-family: Arial, Helvetica, sans-serif;
+                  "
+                >
+                  Powered by <br />
+                  <!-- Melasyl multi patented image - με σταθερό max-width 300px -->
+                  <img
+                    src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/4af32122-e6af-4a2a-a2cc-93135160303d.png"
+                    alt="Melasyl multi patented image"
+                    style="
+                      display: block;
+                      border: 0;
+                      width: 150px;
+                      max-width: 200px;
+                      outline: none;
+                      text-decoration: none;
+                    "
+                  />
+                </span>
+              </td>
+            </tr>
+
+            <!-- MELA B3 + ANTHELIOS Section -->
+            <tr>
+              <td
+                align="center"
+                style="
+                  padding: 10px;
+                  color: #694ea2;
+                  font-size: 40px;
+                  font-weight: bold;
+                  margin: 0;
+                "
+              >
+                <a
+                  target="_blank"
+                  style="text-decoration: none; color: #694ea2"
+                  href="https://gr.lorealdermatologicalbeautypartnershop.com/el/mela-serum-anth-ant1-spot-c2.25/GR5201100712250.html"
+                >
+                  MELA B3
+                </a>
+                <span style="color: #ffffff">+</span>
+                <strong style="color: #f67f0f">
+                  <a
+                    target="_blank"
+                    style="text-decoration: none; color: #f67f0f"
+                    href="https://gr.lorealdermatologicalbeautypartnershop.com/el/mela-cream-anth-ant1-spot-c2.25/GR5201100711956.html"
+                  >
+                    ANTHELIOS
+                  </a>
+                </strong>
+                <br />
+                <span style="color: #ffffff">
+                  <a
+                    target="_blank"
+                    href="https://gr.lorealdermatologicalbeautypartnershop.com/el/search/?q=mela&prefn1=subBrand&prefv1=%CE%A0%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE%20%CE%95%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1"
+                    style="text-decoration: none; color: #ffffff"
+                  >
+                    PROMO BOXES
+                  </a>
+                </span>
+              </td>
+            </tr>
+
+            <!-- Εικόνες / Περιεχόμενο Κειμένου -->
+            <tr>
+              <td align="center" style="padding: 10px; margin: 0">
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  style="
+                    border-spacing: 0;
+                    border-collapse: collapse;
+                    margin: 3rem 0;
+                  "
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      valign="top"
+                      style="padding: 10px; margin: 0"
+                    >
+                      <a
+                        target="_blank"
+                        href="https://gr.lorealdermatologicalbeautypartnershop.com/el/search/?q=mela&prefn1=subBrand&prefv1=%CE%A0%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE%20%CE%95%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1"
+                        style="text-decoration: none"
+                      >
+                        <img
+                          class="product-img"
+                          src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/b4f72676-9214-4aaa-9006-383cb9b92071.jpg"
+                          alt="PROMO image for mela B3 and Anthelios"
+                          style="
+                            display: block;
+                            border: 0;
+                            width: 100%;
+                            max-width: 300px;
+                            height: auto;
+                            outline: none;
+                            text-decoration: none;
+                          "
+                        />
+                      </a>
+                      <table
+                        role="presentation"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        style="
+                          max-width: 300px;
+                          margin: 0 auto;
+                          border-spacing: 0;
+                          border-collapse: collapse;
+                        "
+                      >
+                        <tr>
+                          <td
+                            width="50%"
+                            align="left"
+                            style="
+                              padding: 10px;
+                              color: #694ea2;
+                              margin: 0;
+                              font-family: Arial, Helvetica, sans-serif;
+                            "
+                          >
+                            <p style="margin: 0">Κείμενο Αριστερά</p>
+                            <p style="margin: 0">Κείμενο Αριστερά 2</p>
+                          </td>
+                          <td
+                            width="50%"
+                            align="right"
+                            style="
+                              padding: 10px;
+                              color: #f67f0f;
+                              margin: 0;
+                              font-family: Arial, Helvetica, sans-serif;
+                            "
+                          >
+                            <p style="margin: 0">Κείμενο Δεξιά</p>
+                            <p style="margin: 0">Κείμενο Δεξιά 2</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- CTA Section -->
+                  <tr>
+                    <td
+                      align="center"
+                      style="padding: 20px; color: #ffffff; margin: 0"
+                    >
+                      <a
+                        target="_blank"
+                        href="https://gr.lorealdermatologicalbeautypartnershop.com/el/search/?q=mela&prefn1=subBrand&prefv1=%CE%A0%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE%20%CE%95%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1"
+                        style="text-decoration: none"
+                      >
+                        <p
+                          style="
+                            font-weight: bold;
+                            color: #ffffff;
+                            padding: 1rem;
+                            background-color: #f67f0f;
+                            max-width: 250px;
+                            width: 250px;
+                            margin: 0;
+                            text-align: center;
+                            font-family: Arial, Helvetica, sans-serif;
+                          "
+                        >
+                          ΑΓΟΡΑΣΕ ΤΩΡΑ!
+                        </p>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- Προαιρετικό Footer ή Outro Message -->
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        padding: 10px;
+                        color: #ffffff;
+                        font-size: 12px;
+                        margin: 0;
+                        font-family: Arial, Helvetica, sans-serif;
+                      "
+                    >
+                      <!-- Εδώ μπορείς να προσθέσεις επιπλέον κείμενο, disclaimers, κλπ. -->
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Επιπλέον Footer (branding) -->
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="
+                    width: 100%;
+                    max-width: 600px;
+                    text-align: center;
+                    border-spacing: 0;
+                    border-collapse: collapse;
+                  "
+                  width="600"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      bgcolor="#1C1C1C"
+                      style="padding: 0; margin: 0"
+                      valign="top"
+                    >
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        style="
+                          width: 100%;
+                          max-width: 600px;
+                          border-spacing: 0;
+                          border-collapse: collapse;
+                        "
+                        width="600"
+                      >
+                        <tr>
+                          <td
+                            align="left"
+                            bgcolor="#1C1C1C"
+                            style="padding-bottom: 30px; margin: 0"
+                            valign="top"
+                          >
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              width="100%"
+                              style="
+                                max-width: 600px;
+                                border-spacing: 0;
+                                border-collapse: collapse;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  colspan="8"
+                                  style="padding-bottom: 20px; margin: 0"
+                                >
+                                  <img
+                                    alt="L’Oréal Partner Shop"
+                                    height="70"
+                                    src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/a0bf4cee-56aa-46c7-9e99-5eb5f735c021.png"
+                                    style="
+                                      display: block;
+                                      max-width: 100%;
+                                      height: auto;
+                                      width: 70px;
+                                      padding: 0;
+                                      margin: 0;
+                                      text-align: center;
+                                      border: 0;
+                                      outline: none;
+                                      text-decoration: none;
+                                    "
+                                    width="70"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                width: 100%;
+                                max-width: 600px;
+                                border-spacing: 0;
+                                border-collapse: collapse;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  style="
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 12px;
+                                    line-height: 17px;
+                                    text-align: center;
+                                    color: #ffffff;
+                                    padding: 20px 25px 10px 25px;
+                                    margin: 0;
+                                  "
+                                >
+                                  <p style="margin: 0">
+                                    <u>
+                                      <a
+                                        href="#"
+                                        target="_blank"
+                                        style="
+                                          color: #ffffff;
+                                          text-decoration: none;
+                                        "
+                                      >
+                                        ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ ΓΙΑ ΤΟΥΣ
+                                        ΕΠΙΧΕΙΡΗΜΑΤΙΚΟΥΣ ΠΕΛΑΤΕΣ ΜΑΣ
+                                      </a>
+                                    </u>
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  align="center"
+                                  class="footer"
+                                  colspan="3"
+                                  style="
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 12px;
+                                    line-height: 17px;
+                                    text-align: center;
+                                    color: #ffffff;
+                                    padding: 0px 25px 10px 25px;
+                                    margin: 0;
+                                  "
+                                >
+                                  <p style="margin: 0">
+                                    Λάβετε αυτό το μήνυμα ηλεκτρονικού
+                                    ταχυδρομείου ως εγγεγραμμένος χρήστης του
+                                    Κλάδου Δερμοκαλλυντικών (Dermatological
+                                    Beauty Division) της L'Oréal Hellas.
+                                    Σεβόμαστε την ιδιωτικότητά σας. Εάν δεν
+                                    επιθυμείτε να λαμβάνετε διαφημιστικά
+                                    μηνύματα, κάντε κλικ
+                                    <a
+                                      href="#"
+                                      target="_blank"
+                                      style="
+                                        color: #ffffff;
+                                        text-decoration: underline;
+                                      "
+                                    >
+                                      εδώ </a
+                                    >.
+                                    <br />
+                                    Για πληροφορίες σχετικά με τη χρήση
+                                    προσωπικών δεδομένων, ανατρέξτε στην
+                                    Πολιτική Απορρήτου. Η χρήση του ιστότοπου
+                                    διέπεται από τους Όρους Χρήσης του
+                                    <a
+                                      href="#"
+                                      target="_blank"
+                                      style="
+                                        color: #ffffff;
+                                        text-decoration: underline;
+                                      "
+                                    >
+                                      L'Oréal Dermatological Beauty Partner Shop </a
+                                    >. L’Oréal Hellas A.E., Λεωφ. Εθ.
+                                    Αντιστάσεως 39Α, 142 34, Νέα Ιωνία, Α.Φ.Μ.
+                                    094026261, Δ.Ο.Υ. ΦΑΕ ΑΘΗΝΩΝ.
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- Τέλος έξτρα Footer -->
+              </td>
+            </tr>
+          </table>
+          <!-- Τέλος Container -->
+        </td>
+      </tr>
+    </table>
+    <!-- Τέλος Κεντρικού Πίνακα -->
   </body>
 </html>
