@@ -1,12 +1,25 @@
 <!doctype html>
-<html lang="el">
+<html
+  lang="el"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promo Email - Dark Mode</title>
-
+    <title>Promo Email - 600px Layout</title>
     <style type="text/css">
-      /* -------- Reset Styles -------- */
+      /* Βασικά resets */
+      body,
+      table,
+      td,
+      a {
+        margin: 0;
+        padding: 0;
+        text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
       table {
         border-spacing: 0;
         border-collapse: collapse;
@@ -17,11 +30,14 @@
         outline: none;
         text-decoration: none;
       }
-      /* Έστω για λίγο responsive σε mobile */
+
+      /* Σταθερό πλάτος 600px για desktop */
       .container {
         width: 600px !important;
         max-width: 600px !important;
       }
+
+      /* Media Queries για mobile */
       @media only screen and (max-width: 600px) {
         .container {
           width: 100% !important;
@@ -32,73 +48,59 @@
         }
         .header-sub-text {
           font-size: 30px !important;
-          font-weight: bold !important;
+          font-weight: bold;
         }
         .product-img {
           width: 100% !important;
           max-width: 100% !important;
         }
       }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #1c1c1c;
+        font-family: Arial, Helvetica, sans-serif;
+      }
     </style>
 
     <!--[if mso]>
       <style type="text/css">
-        /* Force Outlook να μη βάζει extra spacing σε πίνακες */
+        body,
         table,
-        td,
-        p,
-        a {
-          font-family: Arial, Helvetica, sans-serif;
+        td {
+          font-family: Arial, sans-serif !important;
         }
       </style>
     <![endif]-->
   </head>
-
-  <body
-    style="
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #1c1c1c;
-    "
-  >
-    <!--[if mso]>
+  <body style="margin: 0; padding: 0; background-color: #1c1c1c">
+    <!--[if gte mso 9]>
       <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
         <v:fill type="tile" color="#1C1C1C" />
       </v:background>
     <![endif]-->
 
-    <!-- Κύριο wrapper table στο 100% πλάτος, με dark background -->
+    <!-- Κύριος πίνακας: 100% πλάτος -->
     <table
       width="100%"
       border="0"
       cellspacing="0"
       cellpadding="0"
       bgcolor="#1C1C1C"
-      style="
-        border-spacing: 0;
-        border-collapse: collapse;
-        width: 100%;
-        background-color: #1c1c1c;
-      "
+      style="background-color: #1c1c1c"
     >
       <tr>
-        <td align="center" style="padding: 0; margin: 0">
-          <!-- Container 600px -->
+        <td align="center">
+          <!-- Container table: σταθερό 600px -->
           <table
             class="container"
             width="600"
             border="0"
             cellspacing="0"
             cellpadding="0"
+            style="width: 600px; max-width: 600px"
             bgcolor="#1C1C1C"
-            style="
-              border-spacing: 0;
-              border-collapse: collapse;
-              width: 600px;
-              max-width: 600px;
-              background-color: #1c1c1c;
-            "
           >
             <!-- Header Section -->
             <tr>
@@ -108,7 +110,6 @@
                   text-align: center;
                   color: #ffffff;
                   font-size: 18px;
-                  margin: 0;
                 "
               >
                 Η παραγγελία μαζί μας είναι απλή, βολική και 24/7 &nbsp;|&nbsp;
@@ -127,59 +128,55 @@
               </td>
             </tr>
 
-            <!-- PartnerShop GIF (επίσης σε dark background) -->
+            <!-- Εικόνα PartnerShop με λευκό background (VML σε Outlook) -->
             <tr>
-              <td
-                align="center"
-                style="padding: 10px; margin: 0; background-color: #1c1c1c"
-              >
-                <!-- [if gte mso 9] δεν χρειάζεται εδώ αν είναι ΜΟΝΟ χρώμα background -->
+              <td align="center" style="padding: 10px" bgcolor="#1C1C1C">
+                <!--[if gte mso 9]>
+                  <v:rect
+                    xmlns:v="urn:schemas-microsoft-com:vml"
+                    fill="true"
+                    stroke="false"
+                    style="width:500px; height:90px;"
+                  >
+                    <v:fill type="solid" color="#ffffff" />
+                    <v:textbox inset="0,0,0,0">
+                <![endif]-->
                 <a
                   style="text-decoration: none"
                   href="https://gr.lorealdermatologicalbeautypartnershop.com/el/home/"
                 >
                   <img
-                    bgcolor="#ffffff"
-                    src="./images/partnershop.gif"
+                    src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/849cb92e-529e-4ebb-a117-56e9b4ebe1ec.gif"
                     alt="PartnerShop"
                     style="
-                      background-color: #ffffff;
                       display: block;
                       border: 0;
                       width: 100%;
                       max-width: 500px;
-                      height: auto;
-                      outline: none;
-                      text-decoration: none;
+                      height: 100px;
+                      background-color: #ffffff;
                     "
                   />
                 </a>
+                <!--[if gte mso 9]>
+                    </v:textbox>
+                  </v:rect>
+                <![endif]-->
               </td>
             </tr>
 
             <!-- Κεντρικό μήνυμα -->
             <tr>
-              <td
-                align="center"
-                style="padding: 20px; color: #ffffff; margin: 0"
-              >
-                <hr />
+              <td align="center" style="padding: 20px; color: #ffffff">
                 <h1
                   class="header-text"
-                  style="
-                    font-size: 40px;
-                    margin: 0;
-                    padding: 0;
-                    color: #ffffff;
-                    font-family: Arial, Helvetica, sans-serif;
-                  "
+                  style="font-size: 40px; margin: 0; padding: 0"
                 >
                   ΤΟ ΑΠΟΛΥΤΟ <span style="color: #0abde3">ΔΕΡΜΑΤΟΛΟΓΙΚΟ</span
                   ><br />
                   <span style="color: #0abde3">ΠΡΩΤΟΚΟΛΛΟ</span><br />
                   ΚΑΤΑ ΤΩΝ <span>ΚΗΛΙΔΩΝ</span>
                 </h1>
-                <hr />
                 <br />
                 <span
                   class="header-sub-text"
@@ -187,22 +184,19 @@
                     font-size: 25px;
                     color: #694ea2;
                     display: block;
-                    margin-top: 5rem;
-                    font-family: Arial, Helvetica, sans-serif;
+                    line-height: 1.2;
                   "
                 >
                   Powered by <br />
+                  <!-- Melasyl multi patented image - με σταθερό max-width 200px -->
                   <img
-                    src="./images/Melasyl logo small.png"
+                    src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/4af32122-e6af-4a2a-a2cc-93135160303d.png"
                     alt="Melasyl multi patented image"
                     style="
                       display: block;
                       border: 0;
-                      width: 350px;
-                      max-width: 350px;
-                      outline: none;
-                      text-decoration: none;
-                      margin-bottom: 5rem;
+                      width: 150px;
+                      max-width: 200px;
                     "
                   />
                 </span>
@@ -218,25 +212,22 @@
                   color: #694ea2;
                   font-size: 40px;
                   font-weight: bold;
-                  margin: 0;
                 "
               >
                 <a
                   target="_blank"
                   style="text-decoration: none; color: #694ea2"
                   href="https://gr.lorealdermatologicalbeautypartnershop.com/el/mela-serum-anth-ant1-spot-c2.25/GR5201100712250.html"
+                  >MELA B3</a
                 >
-                  MELA B3
-                </a>
                 <span style="color: #ffffff">+</span>
                 <strong style="color: #f67f0f">
                   <a
                     target="_blank"
                     style="text-decoration: none; color: #f67f0f"
                     href="https://gr.lorealdermatologicalbeautypartnershop.com/el/mela-cream-anth-ant1-spot-c2.25/GR5201100711956.html"
+                    >ANTHELIOS</a
                   >
-                    ANTHELIOS
-                  </a>
                 </strong>
                 <br />
                 <span style="color: #ffffff">
@@ -253,24 +244,16 @@
 
             <!-- Εικόνες / Περιεχόμενο Κειμένου -->
             <tr>
-              <td align="center" style="padding: 10px; margin: 0">
+              <td align="center" style="padding: 10px">
                 <table
                   width="100%"
                   border="0"
                   cellspacing="0"
                   cellpadding="0"
-                  style="
-                    border-spacing: 0;
-                    border-collapse: collapse;
-                    margin: 3rem 0;
-                  "
+                  style="margin: 3rem 0"
                 >
                   <tr>
-                    <td
-                      align="center"
-                      valign="top"
-                      style="padding: 10px; margin: 0"
-                    >
+                    <td align="center" valign="top" style="padding: 10px">
                       <a
                         target="_blank"
                         href="https://gr.lorealdermatologicalbeautypartnershop.com/el/search/?q=mela&prefn1=subBrand&prefv1=%CE%A0%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE%20%CE%95%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1"
@@ -286,8 +269,6 @@
                             width: 100%;
                             max-width: 300px;
                             height: auto;
-                            outline: none;
-                            text-decoration: none;
                           "
                         />
                       </a>
@@ -297,23 +278,13 @@
                         cellpadding="0"
                         cellspacing="0"
                         width="100%"
-                        style="
-                          max-width: 300px;
-                          margin: 0 auto;
-                          border-spacing: 0;
-                          border-collapse: collapse;
-                        "
+                        style="max-width: 300px; margin: 0 auto"
                       >
                         <tr>
                           <td
                             width="50%"
                             align="left"
-                            style="
-                              padding: 10px;
-                              color: #694ea2;
-                              margin: 0;
-                              font-family: Arial, Helvetica, sans-serif;
-                            "
+                            style="padding: 10px; color: #694ea2"
                           >
                             <p style="margin: 0">Κείμενο Αριστερά</p>
                             <p style="margin: 0">Κείμενο Αριστερά 2</p>
@@ -321,12 +292,7 @@
                           <td
                             width="50%"
                             align="right"
-                            style="
-                              padding: 10px;
-                              color: #f67f0f;
-                              margin: 0;
-                              font-family: Arial, Helvetica, sans-serif;
-                            "
+                            style="padding: 10px; color: #f67f0f"
                           >
                             <p style="margin: 0">Κείμενο Δεξιά</p>
                             <p style="margin: 0">Κείμενο Δεξιά 2</p>
@@ -338,10 +304,7 @@
 
                   <!-- CTA Section -->
                   <tr>
-                    <td
-                      align="center"
-                      style="padding: 20px; color: #ffffff; margin: 0"
-                    >
+                    <td align="center" style="padding: 20px; color: #ffffff">
                       <a
                         target="_blank"
                         href="https://gr.lorealdermatologicalbeautypartnershop.com/el/search/?q=mela&prefn1=subBrand&prefv1=%CE%A0%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE%20%CE%95%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1"
@@ -356,8 +319,6 @@
                             max-width: 250px;
                             width: 250px;
                             margin: 0;
-                            text-align: center;
-                            font-family: Arial, Helvetica, sans-serif;
                           "
                         >
                           ΑΓΟΡΑΣΕ ΤΩΡΑ!
@@ -370,13 +331,7 @@
                   <tr>
                     <td
                       align="center"
-                      style="
-                        padding: 10px;
-                        color: #ffffff;
-                        font-size: 12px;
-                        margin: 0;
-                        font-family: Arial, Helvetica, sans-serif;
-                      "
+                      style="padding: 10px; color: #ffffff; font-size: 12px"
                     >
                       <!-- Εδώ μπορείς να προσθέσεις επιπλέον κείμενο, disclaimers, κλπ. -->
                     </td>
@@ -389,20 +344,14 @@
                   cellpadding="0"
                   cellspacing="0"
                   role="presentation"
-                  style="
-                    width: 100%;
-                    max-width: 600px;
-                    text-align: center;
-                    border-spacing: 0;
-                    border-collapse: collapse;
-                  "
+                  style="width: 100%; max-width: 600px; text-align: center"
                   width="600"
                 >
                   <tr>
                     <td
                       align="center"
                       bgcolor="#1C1C1C"
-                      style="padding: 0; margin: 0"
+                      style="padding: 0"
                       valign="top"
                     >
                       <table
@@ -410,19 +359,14 @@
                         cellpadding="0"
                         cellspacing="0"
                         role="presentation"
-                        style="
-                          width: 100%;
-                          max-width: 600px;
-                          border-spacing: 0;
-                          border-collapse: collapse;
-                        "
+                        style="width: 100%; max-width: 600px"
                         width="600"
                       >
                         <tr>
                           <td
                             align="left"
                             bgcolor="#1C1C1C"
-                            style="padding-bottom: 30px; margin: 0"
+                            style="padding-bottom: 30px"
                             valign="top"
                           >
                             <table
@@ -431,17 +375,13 @@
                               cellspacing="0"
                               role="presentation"
                               width="100%"
-                              style="
-                                max-width: 600px;
-                                border-spacing: 0;
-                                border-collapse: collapse;
-                              "
+                              style="max-width: 600px"
                             >
                               <tr>
                                 <td
                                   align="center"
                                   colspan="8"
-                                  style="padding-bottom: 20px; margin: 0"
+                                  style="padding-bottom: 20px"
                                   valign="top"
                                 >
                                   <img
@@ -454,11 +394,7 @@
                                       height: auto;
                                       width: 70px;
                                       padding: 0;
-                                      margin: 0;
                                       text-align: center;
-                                      border: 0;
-                                      outline: none;
-                                      text-decoration: none;
                                     "
                                     width="70"
                                   />
@@ -472,24 +408,21 @@
                               cellpadding="0"
                               cellspacing="0"
                               role="presentation"
-                              style="
-                                width: 100%;
-                                max-width: 600px;
-                                border-spacing: 0;
-                                border-collapse: collapse;
-                              "
+                              style="width: 100%; max-width: 600px"
                             >
                               <tr>
                                 <td
                                   align="center"
                                   style="
-                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-family:
+                                      Open Sans,
+                                      Arial,
+                                      sans-serif;
                                     font-size: 12px;
                                     line-height: 17px;
                                     text-align: center;
                                     color: #ffffff;
                                     padding: 20px 25px 10px 25px;
-                                    margin: 0;
                                   "
                                   valign="top"
                                 >
@@ -516,13 +449,15 @@
                                   class="footer"
                                   colspan="3"
                                   style="
-                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-family:
+                                      Open Sans,
+                                      Arial,
+                                      sans-serif;
                                     font-size: 12px;
                                     line-height: 17px;
                                     text-align: center;
                                     color: #ffffff;
                                     padding: 0px 25px 10px 25px;
-                                    margin: 0;
                                   "
                                   valign="top"
                                 >
@@ -543,8 +478,7 @@
                                       "
                                     >
                                       εδώ </a
-                                    >.
-                                    <br />
+                                    >. <br />
                                     Για πληροφορίες σχετικά με τη χρήση
                                     προσωπικών δεδομένων, ανατρέξτε στην
                                     Πολιτική Απορρήτου. Η χρήση του ιστότοπου
