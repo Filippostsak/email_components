@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promo Email - 600px Layout</title>
     <style type="text/css">
-      /* --------- Μερικές βασικές επαναφορές --------- */
+      /* Βασικό Reset: Συστήνεται να τα έχουμε για email templates */
       table {
         border-spacing: 0;
         border-collapse: collapse;
       }
-      /* Κρατήσαμε την κλάση container για responsive (media query) */
+      img {
+        display: block;
+        border: 0;
+        outline: none;
+        text-decoration: none;
+      }
+
+      /* Container κλάση για τη σταθερή διάταξη 600px */
       .container {
         width: 600px !important;
         max-width: 600px !important;
       }
-      /* Media Queries: όπου υποστηρίζονται από mobile clients */
+
+      /* Media Queries για mobile, όπου υποστηρίζεται */
       @media only screen and (max-width: 600px) {
         .container {
           width: 100% !important;
@@ -33,15 +41,26 @@
           max-width: 100% !important;
         }
       }
-      /* [if gte mso 9] χρησιμοποιείται παρακάτω για background fallback σε Outlook */
-    </style>
-    <!--[if gte mso 9]>
-      <style type="text/css">
+
+      /*
+      Dark Mode basic hack:
+      - Κάποιοι clients (π.χ. Apple Mail) θα αναγνωρίσουν το @media prefers-color-scheme: dark
+      - Gmail & Outlook μπορεί να το αγνοήσουν ή να κάνουν δικό τους invert.
+    */
+      @media (prefers-color-scheme: dark) {
         body {
-          background-color: #1c1c1c !important;
+          background-color: #000000 !important;
         }
-      </style>
-    <![endif]-->
+        .dark-bg {
+          background-color: #000000 !important;
+          color: #ffffff !important;
+        }
+        .white-bg {
+          background-color: #cccccc !important; /* Αν θέλεις να «γκριζάρει» αντί για καθαρό λευκό */
+          color: #000000 !important;
+        }
+      }
+    </style>
   </head>
 
   <body
@@ -51,13 +70,8 @@
       background-color: #1c1c1c;
       font-family: Arial, Helvetica, sans-serif;
     "
+    class="dark-bg"
   >
-    <!--[if gte mso 9]>
-      <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
-        <v:fill type="tile" color="#1C1C1C" />
-      </v:background>
-    <![endif]-->
-
     <!-- Κύριος πίνακας: 100% πλάτος -->
     <table
       width="100%"
@@ -117,18 +131,14 @@
               </td>
             </tr>
 
-            <!-- Εικόνα PartnerShop με λευκό background (VML σε Outlook) -->
+            <!-- Εικόνα PartnerShop με ΛΕΥΚΟ background χωρίς VML -->
             <tr>
+              <!-- Αν θέλεις να μην αλλάζει ποτέ χρώμα αυτή η περιοχή σε dark mode, βάλε κλάση white-bg -->
               <td
                 align="center"
-                bgcolor="#1C1C1C"
-                style="padding: 10px; margin: 0"
+                style="padding: 10px; margin: 0; background-color: #ffffff"
+                class="white-bg"
               >
-                <!--[if gte mso 9]>
-                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:500px; height:90px;">
-                  <v:fill type="solid" color="#ffffff" />
-                  <v:textbox inset="0,0,0,0">
-              <![endif]-->
                 <a
                   style="text-decoration: none"
                   href="https://gr.lorealdermatologicalbeautypartnershop.com/el/home/"
@@ -141,17 +151,12 @@
                       border: 0;
                       width: 100%;
                       max-width: 500px;
-                      height: 100px;
-                      background-color: #ffffff;
+                      height: 90px;
                       outline: none;
                       text-decoration: none;
                     "
                   />
                 </a>
-                <!--[if gte mso 9]>
-                  </v:textbox>
-                </v:rect>
-              <![endif]-->
               </td>
             </tr>
 
@@ -438,6 +443,7 @@
                                   align="center"
                                   colspan="8"
                                   style="padding-bottom: 20px; margin: 0"
+                                  valign="top"
                                 >
                                   <img
                                     alt="L’Oréal Partner Shop"
@@ -486,6 +492,7 @@
                                     padding: 20px 25px 10px 25px;
                                     margin: 0;
                                   "
+                                  valign="top"
                                 >
                                   <p style="margin: 0">
                                     <u>
@@ -518,6 +525,7 @@
                                     padding: 0px 25px 10px 25px;
                                     margin: 0;
                                   "
+                                  valign="top"
                                 >
                                   <p style="margin: 0">
                                     Λάβετε αυτό το μήνυμα ηλεκτρονικού
