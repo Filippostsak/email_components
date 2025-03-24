@@ -1,167 +1,84 @@
-<!-- Καθορισμός viewport για responsive σχεδίαση -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Συμβατότητα με Internet Explorer -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Καθορισμός κωδικοποίησης χαρακτήρων -->
 <meta charset="UTF-8">
-<!-- Κάποια email clients (Gmail) μπορεί να κόβουν το email αν ξεπεράσει το μέγιστο μέγεθος -->
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-<!-- Κάνει το email να εμφανίζεται σωστά σε σκοτεινή λειτουργία (Dark Mode) -->
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
-<!-- Περιγραφή που μπορεί να χρησιμοποιηθεί για προεπισκόπηση στο inbox -->
 <meta name="description" content="Ανακαλύψτε το MELA B3: Η απόλυτη λύση κατά των κηλίδων! Δείτε τις promo προσφορές τώρα!">
-<!-- Καθορισμός της προεπισκόπησης στο Outlook -->
 <meta name="msapplication-config" content="none">
 <title>MELA B3 PROMO</title>
-
-<!-- Πρόσθετα styles με media query - θα τα διαβάζουν οι περισσότεροι clients.
-     Στο Gmail (web), ενδέχεται να τροποποιηθούν ή να αφαιρεθούν, οπότε
-     βασιζόμαστε κυρίως σε tables / inline styles για βασική responsive συμπεριφορά. -->
 <style type="text/css">
-  /* Προεπιλεγμένες mobile ρυθμίσεις, όταν το πλάτος είναι <= 600px */
   @media only screen and (max-width:600px) {
-    .width-100-mobile {
+    .mobile-full {
       width: 100% !important;
-    }
-    .hide-on-mobile {
-      display: none !important;
-      width: 0 !important;
-      max-height: 0 !important;
-      overflow: hidden !important;
-    }
-    .pad-horz-20-mobile {
-      padding: 0 20px !important;
-    }
-    .text-center-mobile {
-      text-align: center !important;
-    }
-    .font-40-mobile {
-      font-size: 28px !important; /* μικρότερη γραμματοσειρά σε mobile */
-      line-height: 32px !important;
-    }
-    .font-25-mobile {
-      font-size: 18px !important;
-      line-height: 24px !important;
-    }
-    /* Οι εικόνες να μην ξεπερνούν το 100% */
-    img.responsive-image {
-      width: 100% !important;
-      height: auto !important;
       max-width: 100% !important;
+      display: block !important;
+    }
+    .mobile-hide {
+      display: none !important;
+    }
+    .font-resize-40 {
+      font-size: 28px !important;
+      line-height: 34px !important;
+    }
+    .font-resize-25 {
+      font-size: 18px !important;
+      line-height: 22px !important;
     }
   }
 </style>
 
-<!-- START EMAIL BODY -->
-<!-- Πίνακας "container" στο 100% -->
-<table bgcolor="#1c1c1c" width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Arial, helvetica, sans-serif;">
+<table bgcolor="#1c1c1c" style="font-family: Arial, helvetica, sans-serif;"></table>
+<table class="width-100" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; background-color: #1c1c1c; font-family: Arial, helvetica, sans-serif;">
   <tr>
-    <td align="center" valign="top" bgcolor="#1c1c1c" style="padding: 0; background-color: #1c1c1c;">
-      <!--[if mso]>
-      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="600" style="background-color:#1c1c1c;">
+    <td align="center" valign="top" bgcolor="#1c1c1c" style="padding: 0; background-color: #1c1c1c; font-family: Arial, helvetica, sans-serif;">
+      <table class="width-100" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 600px; width: 100%; background-color: #1c1c1c; font-family: Arial, helvetica, sans-serif;">
         <tr>
-          <td>
-      <![endif]-->
-
-      <!-- Πρώτη γραμμή (header top info) -->
-      <table class="width-100" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 600px; width: 100%; background-color: #1c1c1c;">
-        <tr>
-          <td align="center" valign="top" bgcolor="#1c1c1c" style="font-family: Arial, helvetica, sans-serif; font-size: 11px; color: #ffffff; border-bottom: 1px solid #e2e2e2; padding: 10px;">
+          <td align="center" valign="top" bgcolor="#1c1c1c" style="font-family: 'Noto Serif', Georgia, serif; font-size: 11px; color: #ffffff; border-bottom: 1px solid #e2e2e2; padding: 10px; background-color: #1c1c1c;">
             Η παραγγελία μαζί μας είναι απλή, βολική και 24/7 &nbsp;|&nbsp;
             <a href="%%view_email_url%%" style="text-decoration: none; color: #ffffff;">Κάντε κλικ εδώ για προβολή online</a>
           </td>
         </tr>
       </table>
-
-      <!--[if mso]>
-          </td>
-        </tr>
-      </table>
-      <![endif]-->
     </td>
   </tr>
 </table>
 
-
-<!-- Δεύτερος πίνακας λευκού φόντου με το logo -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" class="width-100" role="presentation" style="width: 100%; background-color: #ffffff;" width="100%">
   <tr>
-    <td align="center" bgcolor="#ffffff" style="padding: 0;">
-      <!--[if mso]>
-      <table border="0" cellpadding="0" cellspacing="0" width="600" role="presentation" style="margin-left:auto; margin-right:auto; background-color:#ffffff;">
+    <td align="center" bgcolor="#ffffff" style="padding: 0; background-color: #ffffff;" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" class="width-100" role="presentation" style="max-width: 600px; width: 100%; margin:0 auto; background-color: #ffffff;" width="600">
         <tr>
-          <td>
-      <![endif]-->
-
-      <table border="0" cellpadding="0" cellspacing="0" class="width-100" role="presentation" width="600" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #ffffff;">
-        <tr>
-          <td align="center" bgcolor="#ffffff" style="padding: 0; border-bottom: 1px solid #e2e2e2; background-color: #ffffff;">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" class="width-100" role="presentation" width="100%" style="background-color: #ffffff;">
+          <td align="center" bgcolor="#ffffff" style="padding: 0; border-bottom: 1px solid #e2e2e2; background-color: #ffffff;" valign="top">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" class="width-100" role="presentation" style="width: 100%; background-color: #ffffff;" width="100%">
               <tr>
-                <td align="center" style="padding: 20px 0; margin:0 auto; line-height: 1; background-color: #ffffff;">
-                  <img alt="L'Oreal Active Cosmetics Pro" data-assetid="50808" height="52"
-                       src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/849cb92e-529e-4ebb-a117-56e9b4ebe1ec.gif"
-                       style="display: block; width: 200px; margin-left:auto; margin-right:auto; padding: 0; height: 52px; text-align: center;"
-                       width="200">
+                <td align="center" style="padding: 20px 0; margin:0 auto; line-height: 1; background-color: #ffffff;" valign="top">
+                  <img alt="L'Oreal Active Cosmetics Pro" height="52" src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/849cb92e-529e-4ebb-a117-56e9b4ebe1ec.gif" style="display: block; width: 200px; margin-left:auto; margin-right:auto; padding: 0; height: 52px; text-align: center;" width="200">
                 </td>
-                <!--[if !mso]><!-->
-                <td align="center" style="padding: 25px 0; line-height: 1; display: none; background-color: #ffffff;">
-                  <!-- fallback dark-img, αν χρειάζεται. Είναι κρυμμένη για μη-MSO. -->
+                <td align="center" style="padding: 25px 0; line-height: 1; display: none; background-color: #ffffff;" valign="top">
                   <a href="https://gr.lorealdermatologicalbeautypartnershop.com/el/home/" target="_blank">
-                    <img bgcolor="#ffffff" style="background-color: #ffffff;" alt="L'Oreal Active Cosmetics Pro" border="0"
-                         src="https://image.mail.lorealactivecosmetics.com/lib/fe37117175640478751277/m/1/9748f8f7-5165-4b6a-aa07-d77dbfafec65.png" width="184">
+                    <img style="background-color: #ffffff;" alt="L'Oreal Active Cosmetics Pro" border="0" src="https://image.mail.lorealactivecosmetics.com/lib/fe37117175640478751277/m/1/9748f8f7-5165-4b6a-aa07-d77dbfafec65.png" width="184">
                   </a>
                 </td>
-                <!--<![endif]-->
               </tr>
             </table>
           </td>
         </tr>
       </table>
-
-      <!--[if mso]>
-          </td>
-        </tr>
-      </table>
-      <![endif]-->
     </td>
   </tr>
 </table>
 
-
-<!-- Banner (με τίτλο/κειμενάκι) -->
 <table bgcolor="#1c1c1c" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="background-color:#1c1c1c; text-align:center;">
   <tr>
     <td align="center">
       <table role="presentation" width="600" style="width:600px; max-width:100%; text-align:center;">
         <tr>
           <td align="center" style="padding: 20px; color: #ffffff;">
-            <h1 class="font-40-mobile" style="font-size: 40px; margin: 0; padding: 0;">
-              ΤΟ ΑΠΟΛΥΤΟ <span style="color: #ffffff;">ΔΕΡΜΑΤΟΛΟΓΙΚΟ</span><br>
-              <span style="color: #ffffff;">ΠΡΩΤΟΚΟΛΛΟ</span><br>
-              ΚΑΤΑ ΤΩΝ <span>ΚΗΛΙΔΩΝ</span>
-            </h1>
+            <h1 style="font-size: 40px; margin: 0; padding: 0;">ΤΟ ΑΠΟΛΥΤΟ <span style="color: #ffffff;">ΔΕΡΜΑΤΟΛΟΓΙΚΟ</span><br><span style="color: #ffffff;">ΠΡΩΤΟΚΟΛΛΟ</span><br>ΚΑΤΑ ΤΩΝ <span>ΚΗΛΙΔΩΝ</span></h1>
             <br>
-            <p class="font-25-mobile" style="font-size: 25px; font-style: italic; color: #ffffff; display: block; line-height: 1.6; margin: 0;">
-              με τη δύναμη του
-            </p>
-            <!-- Εικόνα Melasyl multi patented -->
-            <!--[if mso]>
-            <table role="presentation" width="200" style="width:200px;">
-              <tr>
-                <td align="center">
-                  <img src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/4af32122-e6af-4a2a-a2cc-93135160303d.png" width="200" height="auto" style="width:200px; height:auto; display:block;">
-                </td>
-              </tr>
-            </table>
-            <![endif]-->
-            <!--[if !mso]><!-->
-            <img src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/4af32122-e6af-4a2a-a2cc-93135160303d.png"
-                 alt="Melasyl multi patented image"
-                 width="200" height="auto"
-                 style="display: block; margin: 0 auto; border: 0; width: 200px; max-width: 100%;">
-            <!--<![endif]-->
+            <p style="font-size: 25px; font-style: italic; color: #ffffff; display: block; line-height: 1.6; margin: 0;">με τη δύναμη του</p>
+            <img src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/4af32122-e6af-4a2a-a2cc-93135160303d.png" alt="Melasyl multi patented image" width="200" height="auto" style="display: block; margin: 0 auto; border: 0; width: 200px; max-width: 100%;">
           </td>
         </tr>
       </table>
@@ -169,91 +86,63 @@
   </tr>
 </table>
 
-
-<!-- Section για MELA B3 / Promo Boxes -->
-<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #1c1c1c;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #1c1c1c; margin-left:auto; margin-right:auto;">
   <tr>
     <td align="center">
-      <!--[if mso]>
-      <table border="0" cellpadding="0" cellspacing="0" width="600" role="presentation" style="background-color: #1C1C1C; margin-left:auto; margin-right:auto;">
-        <tr>
-          <td align="center">
-      <![endif]-->
-
-      <table border="0" cellpadding="0" cellspacing="0" class="width-100-mobile" role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #1c1c1c;">
+      <table border="0" cellpadding="0" cellspacing="0" class="responsive-table email-container" role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #1c1c1c;">
         <tr>
           <td align="center" style="padding: 10px; color: #694ea2; font-size: 40px; font-weight: bold;">
             <a target="_blank" style="text-decoration: none; color: #694ea2;" href="https://gr.lorealdermatologicalbeautypartnershop.com/el/mela-serum-anth-ant1-spot-c2.25/GR5201100712250.html?cgid=nav-brand-la-roche-posay-oniuecoee%CE%AE-ai%CE%ADnaaea">
-              <span style="line-height:2rem; font-size:1.8rem;"> MELA B3</span>
+              <span style="line-height:2rem; font-size:1.8rem;">MELA B3</span>
             </a>
             <br>
-            <span style="color: #ffffff; line-height:2rem;"> +</span><br>
-            <strong style="color: #f67f0f">
+            <span style="color: #ffffff; line-height:2rem;"> +</span>
+            <br>
+            <strong style="color: #f67f0f;">
               <a target="_blank" style="text-decoration: none; color: #f67f0f;" href="https://gr.lorealdermatologicalbeautypartnershop.com/el/mela-cream-anth-anti-spot-c2.25/GR5201100711956.html?cgid=nav-brand-la-roche-posay-oniuecoee%CE%AE-ai%CE%ADnaaea">
                 <span style="line-height:2rem; font-size:1.8rem;">ANTHELIOS</span><br>
               </a>
             </strong>
             <span style="color: #ffffff;">
-              <a target="_blank" href="https://gr.lorealdermatologicalbeautypartnershop.com/el/%CE%B1%CE%B3%CE%BF%CF%81%CE%B1-%CE%B1%CE%BD%CE%B1-%CE%BC%CE%B1%CF%81%CE%BA%CE%B1/la-roche-posay/%CF%80%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1/?prefn1=subBrand&prefv1=Mela%20B3"
-                 style="text-decoration: none; font-size:1.8rem; color: #ffffff;">
+              <a target="_blank" href="https://gr.lorealdermatologicalbeautypartnershop.com/el/%CE%B1%CE%B3%CE%BF%CF%81%CE%B1-%CE%B1%CE%BD%CE%B1-%CE%BC%CE%B1%CF%81%CE%BA%CE%B1/la-roche-posay/%CF%80%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1/?prefn1=subBrand&prefv1=Mela%20B3" style="text-decoration: none; font-size:1.8rem; color: #ffffff;">
                 <span style="line-height:3.5rem; font-size:2rem;">PROMO BOXES</span>
               </a>
             </span>
           </td>
         </tr>
       </table>
-
-      <!--[if mso]>
-          </td>
-        </tr>
-      </table>
-      <![endif]-->
     </td>
   </tr>
 </table>
 
-
-<!-- Εικόνα των boxes -->
-<table bgcolor="#1c1c1c" width="100%" cellspacing="0" cellpadding="0" role="presentation" class="width-100-mobile">
+<table bgcolor="#1c1c1c" style="background-color: #1c1c1c;" width="100%" cellspacing="0" cellpadding="0" role="presentation" class="responsive-table">
   <tr>
-    <td align="center" style="background-color:#1c1c1c;">
+    <td align="center">
       <a href="https://gr.lorealdermatologicalbeautypartnershop.com/el/%CE%B1%CE%B3%CE%BF%CF%81%CE%B1-%CE%B1%CE%BD%CE%B1-%CE%BC%CE%B1%CF%81%CE%BA%CE%B1/la-roche-posay/%CF%80%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1/?prefn1=subBrand&prefv1=Mela%20B3" title="link to our partnershop webpage">
-        <img class="responsive-image" data-assetid="127423"
-             src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/b4f72676-9214-4aaa-9006-383cb9b92071.jpg"
-             alt="PROMO ASSETS"
-             width="1200"
-             style="display: block; padding: 0; text-align: center; height: auto; width: 100%; max-width: 600px; border: 0;">
+        <img src="https://image.mail.lorealdermatologicalbeauty.com/lib/fe301171756404747d1074/m/1/b4f72676-9214-4aaa-9006-383cb9b92071.jpg" alt="PROMO ASSETS" width="1200" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; max-width: 600px; border: 0px;">
       </a>
     </td>
   </tr>
 </table>
 
-
-<!-- Λεπτομέρειες προσφοράς -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #1c1c1c;">
   <tr>
     <td align="center">
-      <!--[if mso]>
-      <table border="0" cellpadding="0" cellspacing="0" width="600" role="presentation" style="background-color: #1C1C1C;">
-        <tr>
-          <td align="center">
-      <![endif]-->
-
-      <table border="0" cellpadding="0" cellspacing="0" class="width-100-mobile" role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #1c1c1c;">
+      <table border="0" cellpadding="0" cellspacing="0" class="responsive-table email-container" role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #1c1c1c;">
         <tr>
           <td align="center">
             <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="max-width: 600px;">
               <tr>
                 <td width="50%" align="center" style="padding: 10px; color: #ffffff;">
                   <p style="margin: 0; font-size: 1.1rem; text-align: center;">
-                    <strong style="color: #ffffff;">MELA B3 SERUM</strong> <br>
+                    <strong style="color: #ffffff;">MELA B3 SERUM</strong><br>
                     <strong style="font-size: 26px; text-decoration: underline; color: #f67f0f;">ΔΩΡΟ</strong><br>
                     Anthelios UVMUNE 400 <br>ANTI-SPOT FLUID 15ml
                   </p>
                 </td>
                 <td width="50%" align="center" style="padding: 10px; color: #ffffff;">
                   <p style="margin: 0; font-size: 1.1rem; text-align: center;">
-                    <strong style="color: #ffffff;">MELA B3 CREAM</strong> <br>
+                    <strong style="color: #ffffff;">MELA B3 CREAM</strong><br>
                     <strong style="font-size: 26px; text-decoration: underline; color: #f67f0f;">ΔΩΡΟ</strong><br>
                     Anthelios UVMUNE 400 <br>ANTI-SPOT FLUID 15ml
                   </p>
@@ -263,29 +152,19 @@
           </td>
         </tr>
       </table>
-
-      <!--[if mso]>
-          </td>
-        </tr>
-      </table>
-      <![endif]-->
     </td>
   </tr>
 </table>
 
-
-<!-- Κεντρικό Call To Action κουμπί -->
-<div style="background-color:#1c1c1c; text-align:center; padding: 20px 0; font-family: Arial, helvetica, sans-serif;">
-  <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="background-color:#1c1c1c;">
+<div style="background-color:#1c1c1c; font-family: Arial, helvetica, sans-serif; display:flex; justify-content:center; margin-left:auto; margin-right:auto; height:100px;">
+  <table style="background-color:#1c1c1c;" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
     <tr>
       <td align="center">
         <table border="0" cellspacing="0" cellpadding="0" role="presentation">
           <tr>
             <td bgcolor="#F67F0F" style="border-radius: 3px; background-color: #F67F0F;">
-              <a href="https://gr.lorealdermatologicalbeautypartnershop.com/el/%CE%B1%CE%B3%CE%BF%CF%81%CE%B1-%CE%B1%CE%BD%CE%B1-%CE%BC%CE%B1%CF%81%CE%BA%CE%B1/la-roche-posay/%CF%80%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1/?prefn1=subBrand&prefv1=Mela%20B3"
-                 target="_blank"
-                 style="font-weight: bold; font-size: 20px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; border:1px solid #F67F0F; margin:.3rem; text-align: center; text-decoration: none; display: block; padding: 10px; border-radius: 3px;">
-                &Alpha;&Gamma;&Omicron;&Rho;&Alpha;&Sigma;&Epsilon; &Tau;&Omega;&Rho;&Alpha;!
+              <a target="_blank" style="font-weight: bold; font-size: 20px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; border:1px solid #F67F0F; margin:.3rem; text-align: center; text-decoration: none; display: block; background-color: #F67F0F; padding: 10px; border-radius: 3px;" href="https://gr.lorealdermatologicalbeautypartnershop.com/el/%CE%B1%CE%B3%CE%BF%CF%81%CE%B1-%CE%B1%CE%BD%CE%B1-%CE%BC%CE%B1%CF%81%CE%BA%CE%B1/la-roche-posay/%CF%80%CF%81%CE%BF%CF%89%CE%B8%CE%B7%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1/?prefn1=subBrand&prefv1=Mela%20B3">
+                ΑΓΟΡΑΣΕ ΤΩΡΑ!
               </a>
             </td>
           </tr>
@@ -294,4 +173,3 @@
     </tr>
   </table>
 </div>
-<!-- END EMAIL BODY -->
